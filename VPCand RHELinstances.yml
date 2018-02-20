@@ -1,0 +1,129 @@
+Resources:
+
+
+
+
+    VPC:
+
+        Type: AWS::EC2::VPC
+
+        Properties:
+
+            CidrBlock: 10.192.0.0/16
+
+            Tags:
+
+                - Key: Name
+
+                  Value: theVPC
+
+
+
+
+
+    AppNodeM1:
+      Type: 'AWS::EC2::Instance'
+      Properties:
+        InstanceType: t2.micro
+        ImageId: ami-26ebbc5c
+
+
+        Tags:
+          - Key: osenodetype
+            Value: master
+          - Key: Name
+            Value: OSEmaster001
+
+    AppNodeM2:
+      Type: 'AWS::EC2::Instance'
+      Properties:
+        InstanceType: t2.micro
+        ImageId: ami-26ebbc5c
+
+
+        Tags:
+          - Key: osenodetype
+            Value: master
+          - Key: Name
+            Value: OSEmaster002
+
+    AppNodeM3:
+      Type: 'AWS::EC2::Instance'
+      Properties:
+        InstanceType: t2.micro
+        ImageId: ami-26ebbc5c
+
+
+        Tags:
+          - Key: osenodetype
+            Value: master
+          - Key: Name
+            Value: OSEmaster003
+
+
+
+    AppNodeI1:
+      Type: 'AWS::EC2::Instance'
+      Properties:
+        InstanceType: t2.micro
+        ImageId: ami-26ebbc5c
+
+
+        Tags:
+          - Key: osenodetype
+            Value: infra
+          - Key: Name
+            Value: OSEinfra001
+
+    AppNodeI2:
+      Type: 'AWS::EC2::Instance'
+      Properties:
+        InstanceType: t2.micro
+        ImageId: ami-26ebbc5c
+
+
+        Tags:
+          - Key: osenodetype
+            Value: infra
+          - Key: Name
+            Value: OSEinfra002
+
+
+    AppNodeW1:
+      Type: 'AWS::EC2::Instance'
+      Properties:
+        InstanceType: t2.micro
+        ImageId: ami-26ebbc5c
+
+
+        Tags:
+          - Key: osenodetype
+            Value: worker
+          - Key: Name
+            Value: OSEworker001
+
+    AppNodeW2:
+      Type: 'AWS::EC2::Instance'
+      Properties:
+        InstanceType: t2.micro
+        ImageId: ami-26ebbc5c
+
+
+        Tags:
+          - Key: osenodetype
+            Value: worker
+          - Key: Name
+            Value: OSEworker002
+
+    AppNodeANSmaster:
+      Type: 'AWS::EC2::Instance'
+      Properties:
+        InstanceType: t2.micro
+        ImageId: ami-26ebbc5c
+
+
+        Tags:
+          - Key: osenodetype
+            Value: ansiblemaster
+          - Key: Name
+            Value: ansiblemaster001

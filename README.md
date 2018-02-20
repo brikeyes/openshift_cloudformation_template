@@ -1,0 +1,1 @@
+# openshift_cloudformation_template
