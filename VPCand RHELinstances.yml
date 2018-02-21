@@ -1,23 +1,11 @@
 Resources:
-
-
-
-
     VPC:
-
         Type: AWS::EC2::VPC
-
         Properties:
-
             CidrBlock: 10.192.0.0/16
-
             Tags:
-
                 - Key: Name
-
-                  Value: theVPC
-
-
+                  Value: OSE-VPC
 
 
 
